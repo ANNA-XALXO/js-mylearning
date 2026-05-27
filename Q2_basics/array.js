@@ -61,4 +61,42 @@ console.log("Spliced ",newArr4, "original array ",arr)
 // but this removes the elements in original array
 
 
+//--------------------------------------------------------------------//
 
+let namesD = ["Doraemon","Nobita"]
+let namesS = ["Shinchan","BoChan"]
+ const namesDS1 = namesD.concat(namesS)
+ console.log(namesDS)
+ // now we dont have array inside array
+
+ namesD.push(nameS)
+ console.log(namesD)//will show array inside an array
+ console.log(namesD[2][0])//to access the array within the array
+
+ const namesDS2 = [...namesD,...namesS]
+ //this is called spread operator
+ console.log(namesDS2)
+
+
+ const namesDS3 = [...namesD,namesS]
+ //this is called spread operator
+ console.log(namesDS3)
+
+ //if you have several arrays inside an array and you dont know how many
+ let messArray = [1,[2,[3,4[5],[6]]],[4,4],6[5,[67,88]]]
+ let clearArray = messArray.flat(Infinity)
+ console.log(clearArray)
+
+
+ console.log(Array.isArray(messArray))
+ console.log(Array.from("LEMONSODA"))
+ //make an array from the string
+ console.log(Array.from({name:"LEMONSODA"}))
+ // it will show empty array as it does not know what to take in key, value , pairs
+ //to make it work use
+ console.log(Array.from({name:"LEMONSODA"}, ([key,value]) => [key,value]))
+ let water1 = "cold"
+ let water2 = "warm"
+ let water3 = "normal"
+ let water4 = "lukewarm"
+ console.log(Array.of(water1,water2,water3,water4))
